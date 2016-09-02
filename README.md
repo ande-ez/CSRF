@@ -1,16 +1,24 @@
 # Cross Site Request Forgery (CSRF) protection class
 
+
 ## Author
 This repository is created by <ande@evilzone.org>  
-Feel free to use it as you want
+  
+Feel free to use it as you want  
+
 
 ## Introduction
 This is a class to easily protect against CSRF attacks.  
+  
 It uses the PHP session engine to store a randomly generated token string of 100 characters.
+  
 This token is then placed in your POST form or in the URL and verifies that the request came from your server.  
+  
 Each generated token can only be used once.
+
 ### GET requests caution
 Make sure the token is not stolen. If it is, anyone could use it. Be careful when using this in GET requests because of the referer header in the HTTP protocol when loading remote resources on a page.
+
 
 ## Function overview
 ### Public
@@ -24,8 +32,8 @@ Make sure the token is not stolen. If it is, anyone could use it. Be careful whe
 * private static function generateNewToken()
 * private static function validateToken($token)
 
-## Usage
 
+## Usage
 ### Initializing
 You must call the init function somewhere in your code before using the class.
 ```PHP
