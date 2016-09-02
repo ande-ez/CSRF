@@ -81,3 +81,7 @@ if(CSRF::validateGet()) {
     die('Token out of balance');
 }
 ```
+
+
+## Future plans
+- Add support for timeout and make the token one-time-use an option
